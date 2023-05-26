@@ -2,7 +2,11 @@
 
 TokenEase is a powerful Chrome extension designed to enhance your login experience and streamline token management. With TokenEase, you can effortlessly log into Discord using tokens and conveniently save them for future use.
 
-![Image 1](https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p1.png) ![Image 2](https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p2.png) ![Image 3](https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p3.png)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p1.png" alt="Image 1" width="30%">
+  <img src="https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p2.png" alt="Image 2" width="30%">
+  <img src="https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p3.png" alt="Image 3" width="30%">
+</div>
 
 
 ## Features
