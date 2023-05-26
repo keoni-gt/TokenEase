@@ -72,6 +72,8 @@ TokenEase is built with a strong focus on user privacy and data security. All to
 
 TokenEase is primarily developed by Keoni. We welcome your feedback, suggestions, and contributions to improve the extension. If you have any ideas or encounter any issues, please consider starring our GitHub repository and opening an issue or submitting a pull request.
 
+
+
 ## Custom Tools for Money
 
 For personalized tool development services tailored to your specific needs, please contact me through Discord or refer to the GitHub repository for more information.
@@ -79,6 +81,8 @@ For personalized tool development services tailored to your specific needs, plea
 **Discord Contact:** kone#1052
 
 **GitHub Repository:** [TokenEase](https://github.com/keoni-gt/TokenEase)
+
+**Discord Server:** [discord.gg/ScZBZ8w3UF](https://discord.gg/ScZBZ8w3UF)
 
 Let's discuss your requirements and create a customized solution that meets your needs!
 
