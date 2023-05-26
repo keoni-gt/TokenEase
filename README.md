@@ -14,7 +14,7 @@ This guide will walk you through the steps to manually install the TokenEase Chr
 
 Please note that manual installation is recommended for advanced users who prefer to have more control over their extensions. If you're comfortable with this process, let's get started!
 
-# Step 1: Download the Extension Files
+### Step 1: Download the Extension Files
 
 1. Visit the GitHub repository for TokenEase: [TokenEase](https://github.com/keoni-gt/TokenEase).
 2. Click on the green "Code" button and select "Download ZIP" to download the extension files to your computer.
