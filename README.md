@@ -16,7 +16,7 @@ Please note that manual installation is recommended for advanced users who prefe
 
 ## Step 1: Download the Extension Files
 
-1. Visit the GitHub repository for TokenEase: [TokenEase](https://github.com/keoni101/TokenEase).
+1. Visit the GitHub repository for TokenEase: [TokenEase](https://github.com/keoni-gt/TokenEase).
 2. Click on the green "Code" button and select "Download ZIP" to download the extension files to your computer.
 3. Extract the downloaded ZIP file to a location of your choice.
 
@@ -71,7 +71,7 @@ For personalized tool development services tailored to your specific needs, plea
 
 **Discord Contact:** [Your Discord Username#1234]
 
-**GitHub Repository:** [TokenEase](https://github.com/keoni101/TokenEase)
+**GitHub Repository:** [TokenEase](https://github.com/keoni-gt/TokenEase)
 
 Let's discuss your requirements and create a customized solution that meets your needs!
 
