@@ -1,6 +1,6 @@
 # TokenEase Chrome Extension
 
-TokenEase is a powerful Chrome extension designed to enhance your login experience and streamline token management. With TokenEase, you can effortlessly log into various platforms, with a specific focus on Discord, using tokens and conveniently save them for future use.
+TokenEase is a powerful Chrome extension designed to enhance your login experience and streamline token management. With TokenEase, you can effortlessly log into Discord using tokens and conveniently save them for future use.
 
 ## Features
 
