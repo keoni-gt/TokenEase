@@ -6,9 +6,6 @@
     "action": {
       "default_popup": "popup.html"
     },
-    "host_permissions": [
-      "https://example.org/*"
-    ],
     "permissions": [
       "activeTab",
       "scripting",
