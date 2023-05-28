@@ -82,7 +82,7 @@ For personalized tool development services tailored to your specific needs, plea
 
 **GitHub Repository:** [TokenEase](https://github.com/keoni-gt/TokenEase)
 
-**Discord Server:** [discord.gg/ScZBZ8w3UF](https://discord.gg/ScZBZ8w3UF)
+**Discord Server:** [discord.gg/62zPZhYuZj](https://discord.gg/62zPZhYuZj)
 
 Let's discuss your requirements and create a customized solution that meets your needs!
 
