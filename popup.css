@@ -316,3 +316,7 @@ body {
 .credits p:last-child {
     margin-top: 20px;
 }
+
+.userid {
+    display: none;
+}
