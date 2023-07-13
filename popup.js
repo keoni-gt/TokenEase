@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let json = []
             json = JSON.parse(result.accs)
             json = JSON.stringify(json)
+            console.log(json)
             reloadAccs(json)
         })
       });
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // })
 
     // chatgpt = best
-    function createAccount(username, pfp, num) {
+    function createAccount(username, pfp, num, userid) {
         // Create the main container div
         const div = document.createElement('div');
         div.classList.add('big');
@@ -137,6 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
         p.classList.add("u"+num);
         p.classList.add(num);
         p.textContent = username;
+
+        // Create the username paragraph element
+        const id = document.createElement('p');
+        id.classList.add('userid');
+        id.classList.add("userid");
+        id.classList.add("s"+num);
+        id.textContent = userid;
+
 
         // Create the buttons container div
         const buttonsDiv = document.createElement('div');
@@ -171,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         div.appendChild(img);
         div.appendChild(p);
         div.appendChild(buttonsDiv);
+        div.appendChild(id);
 
         // Append the main container div to the '.accs' element (replace '.accs' with your desired selector)
         const accsElement = document.querySelector('.accs');
@@ -190,7 +200,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let n = 0
             json.forEach(element => {
                 n = parseInt(n) + 1
-                createAccount(element.username+"#"+element.discriminator, element.avatar, n.toString())
+                if (element.discriminator != 0) {
+                    createAccount(element.username+"#"+element.discriminator, element.avatar, n.toString(), element.id)
+                } else {
+                    createAccount(element.username, element.avatar, n.toString(), element.id)
+                }
             });
         } else {
             noaccs.classList.remove("none")
@@ -228,16 +242,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     let discriminator = jsonResponse.discriminator
                     let avatar = jsonResponse.avatar
                     let id = jsonResponse.id
-                    console.log(avatar)
-                    if (avatar == null) {
-                        // if user has no avatar its impossible to tell color of it unless we do this!
-                        if (discriminator[3] == 0 || discriminator[3] == 5) { avatar = "./avatar/blurple.png"}
-                        if (discriminator[3] == 1 || discriminator[3] == 6) { avatar = "./avatar/grey.png"}
-                        if (discriminator[3] == 2 || discriminator[3] == 7) { avatar = "./avatar/green.png"}
-                        if (discriminator[3] == 3 || discriminator[3] == 8) { avatar = "./avatar/orange.png"}
-                        if (discriminator[3] == 4 || discriminator[3] == 9) { avatar = "./avatar/red.png"}
+                    console.log(discriminator)
+                    if (discriminator != 0 && discriminator != null) {
+                        if (avatar == null) {
+                            // For user that has not changed updated to username update
+                            // if user has no avatar its impossible to tell color of it unless we do this!
+                            if (discriminator[3] == 0 || discriminator[3] == 5) { avatar = "./avatar/blurple.png"}
+                            if (discriminator[3] == 1 || discriminator[3] == 6) { avatar = "./avatar/grey.png"}
+                            if (discriminator[3] == 2 || discriminator[3] == 7) { avatar = "./avatar/green.png"}
+                            if (discriminator[3] == 3 || discriminator[3] == 8) { avatar = "./avatar/orange.png"}
+                            if (discriminator[3] == 4 || discriminator[3] == 9) { avatar = "./avatar/red.png"}
+                        } else {
+                            avatar = "https://cdn.discordapp.com/avatars/"+id+"/"+avatar+".png"
+                        }
                     } else {
-                        avatar = "https://cdn.discordapp.com/avatars/"+id+"/"+avatar+".png"
+                        if (avatar == null) {
+                            // couldnt find an way to get the right avatar color when user has not set one so we will make it gray temporarly
+                            avatar = "./avatar/grey.png"
+                        } else {
+                            avatar = "https://cdn.discordapp.com/avatars/"+id+"/"+avatar+".png"
+                        }
+                        discriminator = 0
+
                     }
                     chrome.storage.local.get('accs', function(result) {
                         let json = []
@@ -298,44 +324,51 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             let dB = document.getElementsByClassName("delete2");
             let lB = document.getElementsByClassName("login2");
-            console.log(dB);
+            let us = document.getElementsByClassName("userid")
+            console.log(us);
+
+            // Remove button
             for (let n = 0; n < dB.length; n++) {
                 dB[n].addEventListener("click", function(event) {
                     let number = event.target.classList[2];
-                    console.log(number);
-                    let username = document.getElementsByClassName("u" + number)[0].innerHTML
-                    console.log(username);
 
-                    chrome.storage.local.get('accs', function(result) {
-                        let json = JSON.parse(result.accs)
-                        let json2 = []
-                        json.forEach(element => {
-                            if (element.username+"#"+element.discriminator != username) {
-                                json2.push(element)
+                    let userid = document.getElementsByClassName("s" + number)[0].innerHTML
+
+                    console.log(userid)
+                    console.log("-----")
+
+                    chrome.storage.local.get("accs", function(result) {
+                        let oldDB = JSON.parse(result.accs)
+                        let newDB = []
+                        oldDB.forEach(element => {
+                            if (element.id != userid) {
+                                newDB.push(element)
                                 console.log(element.username)
                             }
                         });
-                        json2 = JSON.stringify(json2)
-                        chrome.storage.local.set({ 'accs': json2 }, function(result) {
-                            console.log("saved")
-                        })
-                        reloadAccs(json2)
+                        newDB = JSON.stringify(newDB)
+                        reloadAccs(newDB)
+                        chrome.storage.local.set({"accs": newDB})
                     })
+
                 });
             }
+
+            // Login button
             for (let n = 0; n < lB.length; n++) {
                 lB[n].addEventListener("click", function(event) {
                     let number = event.target.classList[2];
-                    console.log(number);
-                    let pUser = document.getElementsByClassName("u" + number)[0]
+                    let userid = document.getElementsByClassName("s" + number)[0].innerHTML
                     let username = document.getElementsByClassName("u" + number)[0].innerHTML
-                    console.log(username);
+                    let pUser = document.getElementsByClassName("u" + number)[0]
+
                     chrome.storage.local.get('accs', function(result) {
                         let js = JSON.parse(result.accs)
                         js.forEach(element => {
-                            if (element.username+"#"+element.discriminator == username) {
+                            if (element.id == userid) {
                                 let token = element.token
-
+                                console.log(token)
+                                console.log("-----")
 
                                 fetch('https://discordapp.com/api/users/@me', {
                                     headers: {
@@ -364,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                             let json = JSON.parse(result.accs)
                                             let json2 = []
                                             json.forEach(element => {
-                                                if (element.username+"#"+element.discriminator != username) {
+                                                if (element.id != userid) {
                                                     json2.push(element)
                                                     console.log(element.username)
                                                 }
