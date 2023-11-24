@@ -78,7 +78,7 @@ TokenEase is primarily developed by Keoni. We welcome your feedback, suggestions
 
 For personalized tool development services tailored to your specific needs, please contact me through Discord or refer to the GitHub repository for more information.
 
-**Discord Contact:** kone#1052
+**Discord Contact:** keoni_dc
 
 **GitHub Repository:** [TokenEase](https://github.com/keoni-gt/TokenEase)
 
