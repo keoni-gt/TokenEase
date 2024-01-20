@@ -2,13 +2,6 @@
 
 TokenEase is a powerful Chrome extension designed to enhance your login experience and streamline token management. With TokenEase, you can effortlessly log into Discord using tokens and conveniently save them for future use.
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p1.png" alt="Image 1" width="30%">
-  <img src="https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p2.png" alt="Image 2" width="30%">
-  <img src="https://raw.githubusercontent.com/keoni-gt/TokenEase/main/images/p3.png" alt="Image 3" width="30%">
-</div>
-
-
 ## Features
 
 - **Effortless Login**: TokenEase eliminates the need for manual login processes by allowing you to log in with tokens. Simply enter your token, and you're ready to go.
@@ -18,8 +11,6 @@ TokenEase is a powerful Chrome extension designed to enhance your login experien
 ## Installation
 
 This guide will walk you through the steps to manually install the TokenEase Chrome extension.
-
-Please note that manual installation is recommended for advanced users who prefer to have more control over their extensions. If you're comfortable with this process, let's get started!
 
 ### Step 1: Download the Extension Files
 
@@ -47,7 +38,7 @@ After following the above steps, the TokenEase extension should now be successfu
 
 1. Click on the TokenEase icon in your Chrome toolbar to open the extension.
 2. Enter your token in the provided field.
-3. Click the "Login" button to log into your desired platform.
+3. Click the "Login" button to log into your Discord account.
 4. To save a token for future use, click the "Save" button within the extension.
 5. You can access your saved tokens by clicking the "Saved Tokens" option in the extension menu.
 
@@ -60,7 +51,7 @@ That's it! You have manually installed the TokenEase Chrome extension and can no
 
 1. Click on the TokenEase icon in your Chrome toolbar to open the extension.
 2. Enter your token in the provided field.
-3. Click the "Login" button to log into your desired platform.
+3. Click the "Login" button to log into your Discord account.
 4. To save a token for future use, click the "Save" button within the extension.
 5. You can access your saved tokens by clicking the "Saved Tokens" option in the extension menu.
 
@@ -72,18 +63,14 @@ TokenEase is built with a strong focus on user privacy and data security. All to
 
 TokenEase is primarily developed by Keoni. We welcome your feedback, suggestions, and contributions to improve the extension. If you have any ideas or encounter any issues, please consider starring our GitHub repository and opening an issue or submitting a pull request.
 
-
-
 ## Custom Tools for Money
 
 For personalized tool development services tailored to your specific needs, please contact me through Discord or refer to the GitHub repository for more information.
 
 **Discord Contact:** keoni_dc
 
-**GitHub Repository:** [TokenEase](https://github.com/keoni-gt/TokenEase)
-
 **Discord Server:** [discord.gg/62zPZhYuZj](https://discord.gg/62zPZhYuZj)
 
-Let's discuss your requirements and create a customized solution that meets your needs!
+**GitHub Repository:** [TokenEase](https://github.com/keoni-gt/TokenEase)
 
 **Note:** TokenEase is an independent project and is not affiliated with or endorsed by Discord or Chrome.
